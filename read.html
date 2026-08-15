@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Read Pride and Prejudice — Digital PDF Edition</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: #1A1A1A;
+      display: flex;
+      flex-direction: column;
+    }
+    .pdf-reader-header {
+      height: 56px;
+      background-color: #181715;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      border-bottom: 1px solid #333333;
+      z-index: 100;
+      flex-shrink: 0;
+    }
+    .reader-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .reader-brand-title {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #F7F3EB;
+    }
+    .reader-brand-badge {
+      font-size: 0.75rem;
+      background-color: #B8860B;
+      color: #FFFFFF;
+      padding: 2px 8px;
+      border-radius: var(--radius-xs);
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .reader-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn-reader-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .btn-reader-back {
+      background-color: #2A2A28;
+      color: #FFFFFF;
+      border: 1px solid #444444;
+    }
+    .btn-reader-back:hover {
+      background-color: #383836;
+      color: #FFFFFF;
+    }
+    .btn-reader-download {
+      background-color: #B8860B;
+      color: #FFFFFF;
+    }
+    .btn-reader-download:hover {
+      background-color: #996D07;
+      color: #FFFFFF;
+    }
+    .pdf-viewer-frame {
+      flex: 1;
+      width: 100%;
+      height: calc(100vh - 56px);
+      border: none;
+      background-color: #2B2B2B;
+    }
+  </style>
+</head>
+<body>
+  <header class="pdf-reader-header">
+    <div class="reader-brand">
+      <a href="thank-you.html" class="btn-reader-action btn-reader-back">&larr; Back to Order</a>
+      <span class="reader-brand-title">Pride and Prejudice</span>
+      <span class="reader-brand-badge">PDF Edition</span>
+    </div>
+    <div class="reader-actions">
+      <a href="assets/Pride_and_Prejudice_Digital_Edition.pdf" download="Pride_and_Prejudice_Digital_Edition.pdf" class="btn-reader-action btn-reader-download">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+        <span>Download PDF</span>
+      </a>
+    </div>
+  </header>
+
+  <iframe 
+    src="assets/Pride_and_Prejudice_Digital_Edition.pdf#toolbar=1&navpanes=1&statusbar=1&view=FitH" 
+    class="pdf-viewer-frame" 
+    title="Pride and Prejudice Digital PDF Viewer"
+  >
+    <p>Your browser does not support inline PDF viewing. <a href="assets/Pride_and_Prejudice_Digital_Edition.pdf" download>Download the PDF</a> to read.</p>
+  </iframe>
+</body>
+</html>

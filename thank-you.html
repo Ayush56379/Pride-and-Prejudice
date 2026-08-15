@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You for Your Purchase — Pride and Prejudice Digital Edition</title>
+  
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Thank you for purchasing Pride and Prejudice. Access and read your digital edition.">
+
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .thank-you-options-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    
+    .btn-read-online {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 16px 20px;
+      background-color: var(--accent-burgundy);
+      color: #FFFFFF;
+      font-size: 1.05rem;
+      font-weight: 700;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-btn);
+      transition: all var(--transition-fast);
+      text-decoration: none;
+    }
+    
+    .btn-read-online:hover {
+      background-color: #54141B;
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-btn-hover);
+      color: #FFFFFF;
+    }
+    
+    .device-tips-box {
+      margin-top: 32px;
+      padding: 20px;
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-primary);
+      border-radius: var(--radius-md);
+      text-align: left;
+    }
+    
+    .device-tips-title {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-gold-dark);
+      margin-bottom: 12px;
+    }
+    
+    .device-tips-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+    }
+    
+    .device-tips-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    
+    @media (max-width: 600px) {
+      .thank-you-options-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body class="thank-you-page">
+
+  <!-- Header -->
+  <header class="thank-you-header">
+    <div class="container">
+      <div class="brand-logo" style="justify-content: center;">
+        <span class="brand-title">Pride &amp; Prejudice</span>
+        <span class="brand-edition-tag">Order Confirmation</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="thank-you-main">
+    <div class="thank-you-card reveal-fade-up active">
+      
+      <!-- Animated Success Checkmark -->
+      <div class="success-icon-wrap" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+
+      <h1 class="thank-you-heading">Thank You for Your Purchase!</h1>
+      <p class="thank-you-subheading">Your payment was completed successfully.</p>
+      
+      <p class="thank-you-text">
+        Thank you for purchasing <strong>Pride and Prejudice</strong>. Your digital edition is ready to read immediately or download for offline access.
+      </p>
+
+      <!-- Product Summary Box -->
+      <div class="product-summary-box">
+        <img 
+          src="assets/pride-and-prejudice-cover.png" 
+          alt="Pride and Prejudice Cover Thumbnail" 
+          class="product-summary-thumb"
+        >
+        <div class="product-summary-info">
+          <div class="product-summary-title">Pride and Prejudice</div>
+          <div class="product-summary-edition">Digital PDF Edition • Jane Austen (Curated by Ayush Prajapati)</div>
+          <div style="font-size: 0.8rem; color: #1A6E38; font-weight: 600; margin-top: 4px;">
+            ✓ Payment Verified • ₹99.00
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Options (Read Online + Download PDF) -->
+      <div class="thank-you-options-grid">
+        <!-- Option 1: Read Online -->
+        <a href="read.html" class="btn-read-online">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+          </svg>
+          <span>Read Online Now</span>
+        </a>
+
+        <!-- Option 2: Download PDF -->
+        <a 
+          href="assets/Pride_and_Prejudice_Digital_Edition.pdf" 
+          download="Pride_and_Prejudice_Digital_Edition.pdf" 
+          class="btn-download-ebook" 
+          id="btnDownloadEbook"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span>Download PDF</span>
+        </a>
+      </div>
+
+      <!-- Back to Store Link -->
+      <div>
+        <a href="index.html" class="btn-back-store">
+          &larr; Back to Store
+        </a>
+      </div>
+
+      <!-- Device Reading Tips -->
+      <div class="device-tips-box">
+        <div class="device-tips-title">How to Read on Your Devices</div>
+        <div class="device-tips-list">
+          <div class="device-tips-item">
+            <span>📱</span>
+            <span><strong>Mobile &amp; Tablet:</strong> Click <em>Read Online Now</em> to enjoy instant in-browser reading with dark/sepia modes, or open the downloaded PDF in Apple Books or Google Play Books.</span>
+          </div>
+          <div class="device-tips-item">
+            <span>💻</span>
+            <span><strong>Laptop &amp; Desktop:</strong> Open directly in Chrome, Edge, Safari, or Acrobat Reader for high-resolution two-page viewing.</span>
+          </div>
+          <div class="device-tips-item">
+            <span>📖</span>
+            <span><strong>Kindle &amp; eReaders:</strong> Send the downloaded PDF to your Send-to-Kindle email or transfer via USB.</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" style="border-top: 1px solid var(--border-subtle); padding: 32px 0;">
+    <div class="container">
+      <div class="footer-brand">Pride and Prejudice</div>
+      <div class="footer-edition">Digital Edition • © 2026</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
